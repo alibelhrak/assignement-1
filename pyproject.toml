@@ -1,0 +1,14 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]
+
+markers = [
+    "unit: unit tests for individual functions",
+    "positive: tests for valid inputs and expected successful behavior",
+    "negative: tests for invalid inputs and expected rejection",
+    "boundary: tests focused on boundary values",
+]
